@@ -22,6 +22,13 @@ export class ChatPage implements OnInit {
       this.content.scrollToBottom();
     });
   }
+  handleEnter(event: any): void {
+    const keyboardEvent = event as KeyboardEvent; // Forzamos el tipo de evento
+    keyboardEvent.preventDefault(); // Evita el salto de línea
+    if (this.newMsg.trim()) {
+      this.sendMessage();
+    }
+  }  
   signOut() {
     this.chatService.signOut().then(() => {
       this.router.navigateByUrl('/', { replaceUrl: true });

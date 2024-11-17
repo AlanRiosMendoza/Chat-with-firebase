@@ -12,10 +12,7 @@
 <ion-content class="ion-padding">
   <ion-grid>
     <ion-row *ngFor="let message of messages | async">
-      <ion-col 
-        size="9" 
-        class="message" 
-        [offset]="message.myMsg ? 3 : 0" 
+      <ion-col size="9" class="message" [offset]="message.myMsg ? 3 : 0"
         [ngClass]="{ 'my-message': message.myMsg, 'other-message': !message.otherMsg }">
         <b>{{ message.fromName }}</b><br>
         <span>{{ message.msg }}</span>
@@ -30,21 +27,12 @@
     <ion-row class="ion-align-items-center">
       <ion-col size="10">
         <!-- Solo un ion-textarea -->
-        <ion-textarea 
-          autoGrow="true" 
-          class="message-input" 
-          rows="1" 
-          maxlength="200" 
-          [(ngModel)]="newMsg">
+        <ion-textarea autoGrow="true" class="message-input" rows="1" maxlength="200" [(ngModel)]="newMsg"
+          (keydown.enter)="handleEnter($event)">
         </ion-textarea>
       </ion-col>
       <ion-col size="2">
-        <ion-button 
-          expand="block" 
-          fill="clear" 
-          color="primary" 
-          class="msg-btn" 
-          [disabled]="!newMsg.trim()" 
+        <ion-button expand="block" fill="clear" color="primary" class="msg-btn" [disabled]="!newMsg.trim()"
           (click)="sendMessage()">
           Enviar
         </ion-button>
