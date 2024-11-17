@@ -14,7 +14,7 @@
     <ion-row *ngFor="let message of messages | async">
       <ion-col size="9" class="message" [offset]="message.myMsg ? 3 : 0"
         [ngClass]="{ 'my-message': message.myMsg, 'other-message': !message.otherMsg }">
-        <b>{{ message.fromName }}</b><br>
+        <b>{{ message.from }}</b><br>
         <span>{{ message.msg }}</span>
         <div class="time ion-text-right"><br>{{ message.createdAt?.toMillis() }}</div>
       </ion-col>
@@ -24,19 +24,40 @@
 
 <ion-footer>
   <ion-toolbar color="light">
-    <ion-row class="ion-align-items-center">
-      <ion-col size="10">
-        <!-- Solo un ion-textarea -->
-        <ion-textarea autoGrow="true" class="message-input" rows="1" maxlength="200" [(ngModel)]="newMsg"
+    <ion-row class="ion-align-items-center" style="flex-wrap: nowrap;">
+      <!-- Columna para el textarea -->
+      <ion-col size="6" class="ion-no-padding">
+        <ion-textarea 
+          autoGrow="true" 
+          class="message-input" 
+          rows="1" 
+          maxlength="200" 
+          [(ngModel)]="newMsg" 
           (keydown.enter)="handleEnter($event)">
         </ion-textarea>
       </ion-col>
-      <ion-col size="2">
-        <ion-button expand="block" fill="clear" color="primary" class="msg-btn" [disabled]="!newMsg.trim()"
+      
+      <!-- Columna para el ícono -->
+      <ion-col size="2" class="ion-text-center ion-no-padding">
+        <ion-button fill="clear" (click)="sendLocation()">
+          <ion-icon name="map-outline" size="small"></ion-icon>
+        </ion-button>
+      </ion-col>
+      
+      <!-- Columna para el botón de enviar -->
+      <ion-col size="4" class="ion-no-padding">
+        <ion-button 
+          expand="block" 
+          fill="solid" 
+          color="primary" 
+          class="msg-btn" 
+          [disabled]="!newMsg.trim()" 
           (click)="sendMessage()">
           Enviar
         </ion-button>
       </ion-col>
     </ion-row>
+    
+    
   </ion-toolbar>
 </ion-footer>
