@@ -40,21 +40,19 @@ La aplicación utilizará por defecto el puerto 4200
 
 Todo esto es necesario para que pueda funcionar correctamente
 
-##  Variables de Entorno
-
-# Iniciando la integración de su aplicación Ionic y Firebase 
+##  Firebase Chat App
 
 
 ```bash
-rules_version = '2';
-service firebase.storage {
-  match /b/{bucket}/o {
-    match /{allPaths=**} {
-      allow read, write: if request.auth != null;
-    }
-  }
-}
+ ionic start devdacticFire blank --type=angular --capacitor
+ cd ./devdacticFire
+ ng add @angular/fire
+ ionic g page pages/login
+ ionic g page pages/chat
+ ionic g service services/chat
 ```
+
+## environments/environment.ts
 
 
 
