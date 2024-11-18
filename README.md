@@ -112,15 +112,35 @@ Todo esto es necesario para que pueda funcionar correctamente
  ## src/app/pages/chat/chat.page.scss
  ![{B14D3F8B-1780-4DA5-93E0-9CA225A0CFE0}](https://github.com/user-attachments/assets/c909b570-7320-45a8-8a60-131dc11d8a34)
 
-## Capacitor-geolocation
+# Capacitor-geolocation
 
 Install
+```bash
+  npm install @capacitor/geolocation
+  npx cap sync
+```
 
+## src/app/pages/chat/chat.page.ts
+![{B1425229-154E-453C-A94D-E8FA51BA2D40}](https://github.com/user-attachments/assets/2ea302c7-ccba-40f6-aa39-3db7a2c7ffcc)
 
+## Android
+![{542488F1-E785-4278-AE49-7D9926B1CB6A}](https://github.com/user-attachments/assets/e25563fb-08cd-4b15-b219-5e41b9959a81)
 
+# APK
 
+![{7ADD19B1-B2FC-49F2-9258-548B44005AAB}](https://github.com/user-attachments/assets/cd0ef742-261a-446d-9ec6-dc7500e05e78)
 
+![{E8A77106-D37D-4FC6-B948-7E531AE20CE0}](https://github.com/user-attachments/assets/aa0f4e5f-0e3b-4cb1-aaee-b43591415c5f)
 
+![{65A2C2F5-1B9D-49DF-BB73-69B024D5FE53}](https://github.com/user-attachments/assets/b247fb4c-af8d-4321-85a2-d95f883f04fe)
+
+![{DBF7DAA4-1CC8-449F-B8EE-B58EC8F29121}](https://github.com/user-attachments/assets/63d38775-4be5-4741-a386-6ade4c4aa585)
+
+![{57A8D4B4-82AF-445C-9348-DB4EC4CDE213}](https://github.com/user-attachments/assets/fc1b0be5-8713-4362-82c8-7a8d7703f526)
+
+![{E4773964-2248-4DDF-99C4-AB3394D23E5A}](https://github.com/user-attachments/assets/66a5add6-e211-49b8-bacd-bcd5f2e3c171)
+
+![{F9F9CD90-BDBB-409F-B645-18C7ACB16837}](https://github.com/user-attachments/assets/b6a7bfa8-53c7-4e6e-9b29-fb213c4e531f)
 
 
 
