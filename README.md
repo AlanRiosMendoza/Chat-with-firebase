@@ -102,6 +102,7 @@ Todo esto es necesario para que pueda funcionar correctamente
 ![{380990EB-807E-4B10-9A7F-3C31D87C3D4A}](https://github.com/user-attachments/assets/ae94cdaa-8779-461a-a1d4-e81d282c3a25)
 
 # Creating the Ionic Chat View
+## Alan Rios
 
 ## src/app/pages/chat/chat.page.ts
 ![{C53A0231-86F4-4C11-BF54-9C1402BA8A8F}](https://github.com/user-attachments/assets/6bfff8ff-c571-438e-b3a9-5200bc4e120d)
